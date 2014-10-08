@@ -17,4 +17,5 @@ Run "rails server" and run with http://localhost:3000
 
 * Any questions please contact me:
 Blog: http://tranthanhepu.com
+FB: https://www.facebook.com/tranthanhepu
 

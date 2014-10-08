@@ -1,0 +1,44 @@
+
+<div class="header">
+	<div class="menu">
+		<div class="left">
+			<a href="<%= request.env["HTTP_HOST"] %>" class="logo" title="AgriDoctor system">DemoRoR</a>
+			<input type="text" value="" placeholder="Search posts, friends..." class="search"/>
+		</div>
+		<div class="right">
+			<a href="#" title="Sign In" class="sign_in">Sign In</a>
+			<span>or</span>
+			<a href="#" title="Sign Up" class="sign_up">Sign Up</a>
+		</div>
+	</div>	
+</div>
+<div class="main">
+	<div class="main_content">
+		<div class="banner">
+			<h1>Welcome to TRANTHANHEPU.COM</h1>
+			<%= image_tag "banner.png" %>
+		</div>
+		<div class="register">
+			<h1>Sign Up</h1>
+			<h2>It’s free and always will be.</h2>
+			<div class="register_form">
+				<%= form_tag("/signup", method: "post") do %>
+				  <%= text_field_tag(:first_name, value = nil, placeholder:'Fist name') %>
+				  <%= text_field_tag(:last_name, value = nil, placeholder:'Last name') %>
+				  <%= text_field_tag(:email, value = nil, placeholder:'Email') %>
+				  <%= text_field_tag(:pass_word, value = nil, placeholder:'Password') %>
+				  <%= text_field_tag(:retype_pass_word, value = nil, placeholder:'Retype Password') %>
+				  <p>
+				  	By clicking Sign Up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Data Use Policy</a>, including our <a href="#">Cookie Use</a>.</p>
+				  <%= submit_tag("Sign Up", :id => "btn_signup") %>
+				<% end %>
+			</div>
+		</div>
+	</div>	
+</div>
+<div class="footer">
+	<div class="info">
+		<a href="http://tranthanhepu.com">TRANTHANHEPU.COM</a> © 2014
+	</div>
+</div>
+	
