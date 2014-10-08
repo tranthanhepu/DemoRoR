@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+/*
+ * Add bootstrap to project
+ * Added by: TRANTHANHEPU
+ * Date 2014/10/08
+ */
+*= require bootstrap.min

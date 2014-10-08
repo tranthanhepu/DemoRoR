@@ -1,21 +1,21 @@
 == README
 
-This is example project making by Ruby on Rails.
-This is source code I am using to write guide "how to make RoR project" on my blog http://tranthanhepu.com
+This is example project making by Ruby on Rails and I am using to write guide "how to make RoR project" on my blog: http://tranthanhepu.com
 
 * Ruby version 2.1.2
 
-* Mac OS 10.9
+* I'm using Mac OS 10.9 but Linux or Windows is ok.
 
 * Rails 4.1.6
 
 * MySQL Ver 14.14
 
-* How to run 
-Run "rails server" and run with http://localhost:3000
+How to run: run "rails server" and run with http://localhost:3000
 
 
-* Any questions please contact me:
+Any questions please contact me:
+
 Blog: http://tranthanhepu.com
+
 FB: https://www.facebook.com/tranthanhepu
 
