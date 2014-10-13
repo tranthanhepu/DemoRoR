@@ -54,11 +54,11 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true # I can't believe I have to add this option. Does it even exist? I found it on google.
   config.action_mailer.smtp_settings = {
     :enable_starttls_auto => true,
-    :address => "smtp.gmail.com",
+    :address => "mail.gmail.com",
     :port => 587,
     :domain => "gmail.com",
     :authentication => :plain,
-    :user_name => "vanthanh@grooovyware.vn",
-    :password => "thanhtv@@;88",
+    :user_name => "your_email",
+    :password => "yourpass",
   }
 end
