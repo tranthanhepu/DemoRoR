@@ -34,4 +34,31 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Config email server
+  # Coding by: tranthanhepu
+  # Date 2014/10/13
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   address:              'mail.grooovyware.jp',
+  #   port:                 25,
+  #   domain:               'tranthanhepu.com',
+  #   user_name:            'egc',
+  #   password:             'egcpass',
+  #   authentication:       'plain',
+  #   enable_starttls_auto: true  }
+
+
+  config.action_mailer.raise_delivery_errors = true # still no logs about emails
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true # I can't believe I have to add this option. Does it even exist? I found it on google.
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :domain => "gmail.com",
+    :authentication => :plain,
+    :user_name => "vanthanh@grooovyware.vn",
+    :password => "thanhtv@@;88",
+  }
 end

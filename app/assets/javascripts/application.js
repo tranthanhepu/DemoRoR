@@ -14,9 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-/*
- * Add bootstrap javascript
- * Added by: ThanhTV
- * Date 2014/10/08
- */
 //= require bootstrap.min
+//= require angular.min

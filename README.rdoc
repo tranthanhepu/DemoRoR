@@ -1,21 +1,28 @@
 == README
 
-This is example project making by Ruby on Rails and I am using to write guide "how to make RoR project" on my blog: http://tranthanhepu.com
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-* Ruby version 2.1.2
+Things you may want to cover:
 
-* I'm using Mac OS 10.9 but Linux or Windows is ok.
+* Ruby version
 
-* Rails 4.1.6
+* System dependencies
 
-* MySQL Ver 14.14
+* Configuration
 
-How to run: run "rails server" and run with http://localhost:3000
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
 
 
-Any questions please contact me:
-
-Blog: http://tranthanhepu.com
-
-FB: https://www.facebook.com/tranthanhepu
-
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.

@@ -21,25 +21,32 @@
 		<div class="register">
 			<h1>Sign Up</h1>
 			<h2>It’s free and always will be.</h2>
-			<div class="register_form">					
-					<%=form_for :@home, url: "/home/signup" do |f| %>
-						<%= text_field_tag(:first_name, value = nil, placeholder:'Fist name') %>
-						<%= text_field_tag(:last_name, value = nil, placeholder:'Last name') %>
-						<%= text_field_tag(:email, value = nil, placeholder:'Email') %>
-						<%= text_field_tag(:pass_word, value = nil, placeholder:'Password') %>
-						<%= text_field_tag(:retype_pass_word, value = nil, placeholder:'Retype Password') %>
-					  	<p>
-					  		By clicking Sign Up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Data Use Policy</a>, including our <a href="#">Cookie Use</a>.
-					  	</p>
-				  	<%= submit_tag("Sign Up", :id => "btn_signup") %>
-				<% end %>
+			<div class="register_form">				
+				<%= form_for(@signup, url: 'new') do |f| %>
+
+					<% if @signup.errors.any? %>
+				        <div class="message">				          				          
+				            <% @signup.errors.full_messages.each do |msg| %>
+				                <p class="bg-warning">★ <%= msg %></p>
+				            <% end %>				          
+				        </div>
+				    <% end %>
+				  	<%= f.text_field :first_name, :placeholder => "Fist name", :class => 'short_input', "ng-model" => "signup.first_name", :required => "required" %>
+				  	<%= f.text_field :last_name, :placeholder => 'Last name', :class => 'short_input', "ng-model" => "signup.last_name", :required => "required" %>
+				  	<%= f.email_field :email, :placeholder => 'Email', :class => 'long_input', "ng-model" => "signup.email", :required => "required" %>				  	 
+				  	<%= f.password_field :password, :placeholder => 'Password', :class => 'long_input', "ng-model" => "signup.password", :required => "required" %>
+				  	<%= f.password_field :password_confirmation, :placeholder => 'Retype Password', :class => 'long_input', "ng-model" => "signup.passwordConfirm", "data-match"=>"password", :required => "required" %>
+				  	<p>
+				  		By clicking Sign Up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Data Use Policy</a>, including our <a href="#">Cookie Use</a>.</p>
+				  	<%= f.submit :"Sign Up", :id => "btn_signup", :"ng-disabled" => "form.$invalid || isUnchanged(signup)" %>
+				<% end %>	
 			</div>
 		</div>
 	</div>	
 </div>
 <div class="footer">
 	<div class="info">
-		<a href="http://tranthanhepu.com">TRANTHANHEPU.COM</a> © 2014
+		TRANTHANHEPU.COM © 2014
 	</div>
 </div>
 	
