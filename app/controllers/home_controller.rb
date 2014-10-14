@@ -3,10 +3,13 @@
 # Update 2014/10/13
 
 class HomeController < ApplicationController
+
+  #========= Index =========#
   def index  	  	
   	@signup = Home.new  
   end
 
+  #========= Signup new account =========#
   def new
     if request.post?
       @signup = Home.new(signup_params)   
@@ -32,5 +35,10 @@ class HomeController < ApplicationController
   	params.require(:home).permit(:first_name, :last_name, :email, :password, :password_confirmation)
   end
 
+
+  #========= Active account by email =========#
+  def active
+    puts 'aaaa'
+  end
   
 end

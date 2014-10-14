@@ -38,7 +38,7 @@
 				  	<%= f.password_field :password_confirmation, :placeholder => 'Retype Password', :class => 'long_input', "ng-model" => "signup.passwordConfirm", "data-match"=>"password", :required => "required" %>
 				  	<p>
 				  		By clicking Sign Up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Data Use Policy</a>, including our <a href="#">Cookie Use</a>.</p>
-				  	<%= f.submit :"Sign Up", :id => "btn_signup", :"ng-disabled" => "form.$invalid || isUnchanged(signup)" %>
+				  	<%= f.submit :"Sign Up", :id => "btn_signup" %>
 				<% end %>	
 			</div>
 		</div>

@@ -59,4 +59,6 @@ Rails.application.routes.draw do
   get 'new' => 'home#index'
   post 'new' => 'home#new'
 
+  get 'active' => 'home#active'
+
 end
